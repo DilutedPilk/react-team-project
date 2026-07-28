@@ -9,7 +9,7 @@ async function getCats(query){
 }
 
 async function getCatsByID(id){
-        try {
+    try {
         const request = await fetch(`https://api.thecatapi.com/v1/images/${id}`)
         const result = await request.json();
         return result
