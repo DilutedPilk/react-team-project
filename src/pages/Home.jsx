@@ -15,7 +15,6 @@ export default function Home({ items, favoriteItems, toggleFavorite }) {
 
   return (
     <div className={theme == 'light'? 'bg-white':'bg-mist-600 text-white'}>
-      <h1 className="flex justify-center items-center m-5">Cat Search Website</h1>
       <SearchBar onSearch={handleSearch} />
       <ItemList items={items}
       favoriteItems={favoriteItems}
