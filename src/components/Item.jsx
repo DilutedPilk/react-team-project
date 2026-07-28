@@ -11,18 +11,24 @@ export default function Item({ item, favoriteItems, toggleFavorite }) {
       role="button"
       tabIndex={0}
       onKeyDown={(e) => e.key === "Enter" && navigate(`/items/${item.id}`)}
+      className="flex items-center text-center p-10"
     >
-      <img src={item.thumbnail} alt={item.title} />
-      <h3>{item.title}</h3>
-      <p>{item.description}</p>
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          toggleFavorite(item);
-        }}
-      >
-        {isFavorite ? "Remove from Favorites" : "Add to Favorites"}
-      </button>
+      <img className="w-3xl rounded-xl" src={item.thumbnail} alt={item.title} />
+      <div className="flex-col p-10">
+        <h3>{item.title}</h3>
+        <br />
+        <p>{item.description}</p>
+        <br />
+        <button
+          className="bg-rose-300 p-5 rounded-xl"
+          onClick={(e) => {
+            e.stopPropagation();
+            toggleFavorite(item);
+          }}
+        >
+          {isFavorite ? "Remove from Favorites" : "Add to Favorites"}
+        </button>
+      </div>
     </div>
   );
 }

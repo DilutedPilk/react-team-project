@@ -4,7 +4,7 @@ export default function CatItem({ item }) {
 
     const navigate = useNavigate();
 
-    <div onClick={() => navigate(`/cats/${item.id}`)}>
+    <div onClick={() => navigate(`/items/${item.id}`)}>
         <img src={item.url} alt="" />
     </div>
     
