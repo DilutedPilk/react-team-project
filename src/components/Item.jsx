@@ -20,7 +20,7 @@ export default function Item({ item, favoriteItems, toggleFavorite }) {
         <p>{item.description}</p>
         <br />
         <button
-          className="bg-rose-300 p-5 rounded-xl"
+          className="bg-rose-300 p-5 rounded-xl hover:bg-rose-500 hover:text-white"
           onClick={(e) => {
             e.stopPropagation();
             toggleFavorite(item);
