@@ -1,3 +1,4 @@
+import { useState } from "react";
 import SearchBar from "../components/SearchBar.jsx";
 import ItemList from "../components/ItemList.jsx";
 import { ThemeContext } from "../context.js";

@@ -11,18 +11,18 @@ export default function SearchBar({ onSearch }) {
   return (
     <form
       onSubmit={handleClick}
-      className="mx-auto flex w-full max-w-xl gap-3 rounded-2xl bg-white p-3 shadow-lg"
+      className="flex items-center justify-center gap-4 p-6"
     >
       <input
         type="text"
         placeholder="Search a cat"
         value={searchText}
         onChange={(e) => setSearchText(e.target.value)}
-        className="flex-1 rounded-xl border border-gray-300 px-4 py-3 shadow-sm focus:border-purple-400 focus:outline-none"
+        className="rounded-xl border p-3 w-80"
       />
       <button
         type="submit"
-        className="rounded-xl bg-purple-500 px-6 py-3 font-medium text-white hover:bg-purple-600"
+        className="bg-rose-300 p-3 rounded-xl hover:bg-rose-500 hover:text-white"
       >
         Search
       </button>
