@@ -7,12 +7,14 @@ export default function Home({ items, favoriteItems, toggleFavorite }) {
   }
 
   return (
-    <div>
-      <h1>Cat Search Website</h1>
+    <div className="p-6">
+      <h1 className="text-center text-4xl mb-2">Cat Search Website</h1>
       <SearchBar onSearch={handleSearch} />
-      <ItemList items={items}
-      favoriteItems={favoriteItems}
-      toggleFavorite={toggleFavorite} />
+        <ItemList
+          items={items}
+          favoriteItems={favoriteItems}
+          toggleFavorite={toggleFavorite}
+        />
     </div>
   );
 }
