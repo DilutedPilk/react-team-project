@@ -16,7 +16,16 @@ function App() {
 
   useEffect(() => {
     api.getCats('').then(data => {
-      if (data) setItems(data)
+      if (data) {
+        const mapped = data.map(cat => ({
+          id: cat.id,
+          thumbnail: cat.url,
+          title: cat.breeds?.[0]?.name || 'Unknown Cat',
+          description: cat.breeds?.[0]?.description || 'No description available.',
+          url: cat.url,
+        }))
+        setItems(mapped)
+      }
     })
   }, [])
 
