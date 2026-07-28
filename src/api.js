@@ -10,7 +10,7 @@ async function getCats(query){
 
 async function getCatsByID(id){
     try {
-        const request = await fetch(`https://api.thecatapi.com/v1/images/${id}`)
+        const request = await fetch(`https://api.thecatapi.com/v1/images/${id}&api_key=${import.meta.env.VITE_API_KEY}`)
         const result = await request.json();
         return result
     } catch (error) {
