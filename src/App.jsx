@@ -9,6 +9,16 @@ import { ThemeContext } from './context.js'
 import api from './api.js'
 import './styles/App.css'
 
+api.getCats = async function (query) {
+  try {
+    const request = await fetch(`https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=${query}&api_key=${import.meta.env.VITE_API_URL}`)
+    const result = await request.json();
+    return result
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 function App() {
   const [items, setItems] = useState([])
   const [favoriteItems, setFavoriteItems] = useState([])
