@@ -3,7 +3,7 @@ import ItemList from "../components/ItemList.jsx";
 export default function Favorites({ favoriteItems, toggleFavorite }) {
   return (
     <div className="favorites">
-      <h2>Your Favorites</h2>
+      <h2 className="flex justify-center items-center m-5 underline text-2xl">Your Favorites</h2>
       <ItemList
         items={favoriteItems}
         favoriteItems={favoriteItems}

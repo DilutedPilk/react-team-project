@@ -8,7 +8,7 @@ export default function Home({ items, favoriteItems, toggleFavorite }) {
 
   return (
     <div>
-      <h1>Cat Search Website</h1>
+      <h1 className="flex justify-center items-center m-5">Cat Search Website</h1>
       <SearchBar onSearch={handleSearch} />
       <ItemList items={items}
       favoriteItems={favoriteItems}

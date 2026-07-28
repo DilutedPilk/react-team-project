@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+:root {
+  --background: 240,248,255;
+  --text: 16,12,8;
+}
+
+.dark {
+  --background: 85,85,85;
+  --text: 245,245,245;
+}
