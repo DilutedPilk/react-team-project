@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function SearchBar({ onSearch }) {
   const [searchText, setSearchText] = useState("");
 
-  function handleclick() {
+  function handleClick() {
     onSearch(searchText);
   }
 
