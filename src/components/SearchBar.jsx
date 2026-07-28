@@ -22,7 +22,7 @@ export default function SearchBar({ onSearch }) {
       />
       <button
         type="submit"
-        className="bg-rose-300 p-3 rounded-xl"
+        className="bg-rose-300 p-3 rounded-xl hover:bg-rose-500 hover:text-white"
       >
         Search
       </button>
