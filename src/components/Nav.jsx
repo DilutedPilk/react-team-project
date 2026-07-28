@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import {useContext}  from "react";
 import {ThemeContext} from "../context.js";
-import "../styles/nav.css";
+import "../styles/App.css";
 
 //--------------Navigation Component--------------------
 export default function Nav (props) {
