@@ -48,7 +48,7 @@ function App() {
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <Nav />
       <Routes>
-        <Route path="/" element={<Home items={items} favoriteItems={favoriteItems} toggleFavorite={toggleFavorite} />} />
+        <Route path="/" element={<Home items={items.filter(item => !favoriteItems.some(fav => fav.id === item.id))} favoriteItems={favoriteItems} toggleFavorite={toggleFavorite} />} />
         <Route path="/favorites" element={<Favorites favoriteItems={favoriteItems} toggleFavorite={toggleFavorite} />} />
         <Route path="/items/:id" element={<ItemDetails />} />
         <Route path="*" element={<NotFound />} />
